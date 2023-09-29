@@ -1,14 +1,16 @@
 public class Venta {
     private String codigo;
-    private String codigoArticulo;
+    //private String codigoArticulo;
+    //atributo objeto Articulo
+    private Articulo articulo;
     private double cantidad;
 
     public Venta() {
     }
 
-    public Venta(String codigo, String codigoArticulo, double cantidad) {
+    public Venta(String codigo, Articulo articulo, double cantidad) {
         this.codigo = codigo;
-        this.codigoArticulo = codigoArticulo;
+        this.articulo = articulo;
         this.cantidad = cantidad;
     }
 
@@ -20,12 +22,12 @@ public class Venta {
         this.codigo = codigo;
     }
 
-    public String getCodigoArticulo() {
-        return codigoArticulo;
+    public Articulo getArticulo() {
+        return articulo;
     }
 
-    public void setCodigoArticulo(String codigoArticulo) {
-        this.codigoArticulo = codigoArticulo;
+    public void setArticulo(Articulo articulo) {
+        this.articulo = articulo;
     }
 
     public double getCantidad() {
@@ -38,7 +40,7 @@ public class Venta {
 
     public void showInfo(){
         System.out.println(this.getCodigo());
-        System.out.println(this.getCodigoArticulo());
+        System.out.println(this.getArticulo().getCodigo());
         System.out.println(this.getCantidad());
     }
 

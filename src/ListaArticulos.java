@@ -31,4 +31,15 @@ public class ListaArticulos {
         }
     }
 
+    //metodo para buscar un articulo por el codigo
+    //retorna un Articulo, recibe un codigo String
+    Articulo getArticuloByCodigo(String codigo){
+        for (Articulo a: articuloList) {
+            if(a.getCodigo().compareTo(codigo)==0){
+                return a;
+            }
+        }
+        return null;
+    }
+
 }

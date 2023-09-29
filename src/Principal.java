@@ -62,12 +62,21 @@ public class Principal {
 
         c = categorias.getCategoriaByCodigo("0-A");
         articulos.addArticuloToList(new Articulo("001","Arroz",c,50,2500));
-        c = categorias.getCategoriaByCodigo("0-B");
         articulos.addArticuloToList(new Articulo("002","Cafe",c,30,4000));
+        c = categorias.getCategoriaByCodigo("0-B");
+        articulos.addArticuloToList(new Articulo("003","Jabon",c,30,5000));
         articulos.generarGanancias(categorias);
 
         articulos.showList();
 
+        ListaVentas ventas = new ListaVentas();
+        Articulo a;
+        a = articulos.getArticuloByCodigo("001");
+        ventas.addVentaToList(new Venta("V001",a,5));
+        a = articulos.getArticuloByCodigo("002");
+        ventas.addVentaToList(new Venta("V001",a,5));
+        a = articulos.getArticuloByCodigo("003");
+        ventas.addVentaToList(new Venta("V002",a,3));
 
     }
 }
