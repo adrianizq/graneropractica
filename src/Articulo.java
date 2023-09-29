@@ -70,7 +70,7 @@ public class Articulo {
     public void showInfo(){
         System.out.println( this.getCodigo() );
         System.out.println( this.getNombre() );
-        System.out.println( this.getCategoria() );
+        System.out.println( this.getCategoria().getCodigo() );
         System.out.println( this.getCantidad() );
         System.out.println( this.getValorCompra() );
         System.out.println(this.getValorVenta());
