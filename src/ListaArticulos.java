@@ -27,7 +27,7 @@ public class ListaArticulos {
 
     public void generarGanancias(ListaCategorias listaCategorias){
         for(Articulo a: articuloList){
-            a.setGanancia(listaCategorias);
+            a.setValorVenta(listaCategorias);
         }
     }
 

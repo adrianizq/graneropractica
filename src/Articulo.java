@@ -73,16 +73,11 @@ public class Articulo {
         System.out.println( this.getCategoria() );
         System.out.println( this.getCantidad() );
         System.out.println( this.getValorCompra() );
-        System.out.println(this.getGanancia());
+        System.out.println(this.getValorVenta());
     }
 
     public void setValorVenta(ListaCategorias listaCategorias){
-       /* for (Categoria c: listaCategorias.categoriaList){
-            if(this.getCategoria().equals(c)){
-                this.valorVenta = this.valorCompra * c.getGanancia() + this.valorCompra;
-            }
-        }*/
-        this.valorVenta = this.valorCompra * this.categoria.getGanancia();
+         this.valorVenta = this.valorCompra * (1+ this.categoria.getGanancia());
     }
 
 }

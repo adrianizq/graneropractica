@@ -57,9 +57,13 @@ public class Principal {
         categorias.addCategoriaToList(new Categoria("0-A","Alimentos",0.10));
         categorias.addCategoriaToList(new Categoria("0-B","Aseo",0.15));
 
+        Categoria c;
         ListaArticulos articulos = new ListaArticulos();
-        articulos.addArticuloToList(new Articulo("001","Arroz","0-A",50,2500));
-        articulos.addArticuloToList(new Articulo("002","Cafe","0-A",30,4000));
+
+        c = categorias.getCategoriaByCodigo("0-A");
+        articulos.addArticuloToList(new Articulo("001","Arroz",c,50,2500));
+        c = categorias.getCategoriaByCodigo("0-B");
+        articulos.addArticuloToList(new Articulo("002","Cafe",c,30,4000));
         articulos.generarGanancias(categorias);
 
         articulos.showList();

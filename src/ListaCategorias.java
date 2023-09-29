@@ -21,5 +21,15 @@ public class ListaCategorias {
             c.showInfo();
         }
     }
-
+    //crear un metodo que reciba un String (codigo categoria) y retorne
+    //la categoria con ese codigo
+    Categoria getCategoriaByCodigo(String codigo){
+        //recorremos nuestra lista en busca de la categoria con ese codigo
+        for (Categoria c:categoriaList) {
+            if(c.getCodigo().compareTo(codigo)==0){
+                return c;
+            }
+        }
+        return null;
+    }
 }
